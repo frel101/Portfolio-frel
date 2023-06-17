@@ -1,0 +1,192 @@
+/* Gaya CSS untuk tampilan */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: auto;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 300px;
+    text-align: left;
+    color: #fff;
+}
+
+.about {
+    background-color: #ffffff;
+    padding: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.text-overlay{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+}
+
+.text{
+    flex: 1;
+    order: 2;
+    text-align: justify;
+}
+
+.about .text .text-right {
+    text-decoration: underline;
+        text-decoration-color: rgb(193, 190, 190);
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 1em;
+    /* Justifikasi teks (rata kiri dan kanan) */
+}
+
+.image {
+    flex: 1;
+    order: 2;
+    text-align: left;
+    box-shadow: #333;
+}
+
+.text-portfolio{
+    position: absolute;
+        
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: larger;
+        padding-bottom: 9%;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    transition: all .2s cubic-bezier(.34,1.12,.68,1.31);
+}
+
+.portfolio{
+    min-height: 100vh;
+    background: #eee;
+    padding-bottom: 100px;   
+    padding-top: 10%;
+}
+
+.portfolio .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio .image-container .image{
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border: 15px solid #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.portfolio .image-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio .image-container .image:hover img{
+    transform: scale(1.4);
+}
+
+.contact {
+    background-color: #eee;
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* style.css */
+
+.contact-content {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-content .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact-content .contact-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-content .contact-icons a:hover {
+    transform: scale(1.2);
+}
+
+.contact-content .contact-icons img {
+    width: 40px;
+    height: 40px;
+}

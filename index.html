@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio-frel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- css popup link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to my website</h1>
+            <h2>Hi, my name is Frely</h2>
+        </div>
+    </section>
+    </section>
+
+    <section id="about">
+    <section class="about">
+        <div class="text-overlay">
+        <h3>ABOUT</h3>
+        </div>
+        <div class="image">
+            <img src="img/profile4.png" alt="Gambar Anda">
+        </div>
+        <div class="text">
+            <h2 class="text-right"><p>Hallo</p></h2>
+
+            <p>Dengan latar belakang pendidikan di bidang multimedia, saya telah mengikuti jurusan multi media dan memperoleh
+            pengetahuan yang mendalam dalam desain serta pengembangan website selama masa sekolah. Selama proses belajar, saya
+            belajar untuk menggabungkan elemen visual yang menarik dengan teknik pengembangan yang tepat guna menciptakan
+            karya-karya digital yang memikat dan fungsional. Semangat saya dalam dunia kreativitas digital terus membara dan
+            mendorong saya untuk terus melangkah maju.</p><br>
+            <p>
+            Dalam usaha untuk mengembangkan diri dan meningkatkan keahlian saya, saya memutuskan untuk melanjutkan studi di jurusan
+            teknik informatika saat kuliah. Pilihan ini dilakukan dengan tujuan untuk memfokuskan dan memperluas keterampilan coding
+            saya. Selama perjalanan kuliah, saya telah menggali lebih dalam dalam pemrograman dan mempelajari berbagai konsep dan
+            teknologi terkait. Keputusan ini memungkinkan saya untuk mengintegrasikan kemampuan desain visual saya dengan pemahaman
+            teknis yang kuat dalam pengembangan website dan aplikasi. Saya yakin bahwa kombinasi latar belakang pendidikan dan
+            keterampilan yang saya miliki akan membantu saya mencapai kesuksesan dalam menghadapi tantangan di industri teknologi
+            informasi yang terus berkembang.
+            </p>
+        </div>
+    </section>
+    </section>
+
+    <selection id="portfolio">
+   <div class="portfolio">
+    <div class="text-portfolio">
+        <h3>PORTFOLIO</h3>
+    </div>
+        <div class="image-container">
+            <a href="img/project/project1.jpg" class="image 3d">
+                <img src="img/project/project1.jpg" alt="">
+            </a>
+            <a href="img/project/project2.jpg" class="image 3d">
+                <img src="img/project/project2.jpg" alt="">
+            </a>
+            <a href="img/project/project3.jpg" class="image 3d">
+                <img src="img/project/project3.jpg" alt="">
+            </a>
+        </div>
+   </div>
+</selection>
+
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Contact</h2>
+            <div class="contact-icons">
+                <a href="#"><img src="img/fb.png" alt="Facebook"></a>
+                <a href="#"><img src="img/git.png" alt="GitHub"></a>
+                <a href="#"><img src="img/ig.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.buttons').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+
+                var filter = $(this).attr('data-filter')
+
+                if(filter == 'all'){
+                    $('.image').show(400);
+                }else{
+                    $('.image').not('.'+filter).hide(200);
+                    $('.image').filter('.'+filter).show(400);
+                }
+            });
+                $('.portfolio').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    portfolio: {
+                        enabled: true
+                    }
+                });
+
+            });
+    </script>
+</body>
+
+</html>
